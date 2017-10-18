@@ -125,9 +125,22 @@
 		
 	#Right Pathway			
 	RightNarr1: .asciiz "Narrator: Cropsey decided that he wanted to go through the right door. It just seems like he is a little lost. Now he is in an empty room with a table in the middle and a plant in the corner. Cropsey just needs to take the left door to go back on his way towards his office.\n1 - Go through the door on the left\n2 - Go through the door on the right\n3 - Approach the table in the center of the room\n4 - Approach the plant in the corner"
-		RDoor1: .asciiz "Narrator: Cropsey goes through the left door and is now in a hallway with an elevator. Cropsey will take the elevator up a floor where his office is located. \n1 - Take the elevator. \n2 - Walk into the broom closet next to the elevator."
+		reElevator: .asciiz "Narrator: Cropsey goes through the left door and is now in a hallway with an elevator. Cropsey will take the elevator up a floor where his office is located. \n1 - Take the elevator. \n2 - Walk into the broom closet next to the elevator."
 		
-		RDoor2: .asciiz "Narraotr: "
+		EmptyRoom: .asciiz "Narrator: It seems that Cropsey has no sense of direction at all. I guess his puny brain can't determine the difference between left and right. Now Cropsey is in yet another empty room with two doors in front of him. Let's see if he is able to go through the right door now. Cropsey, go through the right door. \n Go through the right door \n Go through the left door "
+			BombRoom: .asciiz "Narrator: Are you doing this just to spite me, Cropsey? What exactly are you trying to acheive by disobeying me? I thought maybe you just really liked right doors but it seems you just want to anger me. Well, what is Cropsey going to do now. He's in a room with a chest in the center and door behind it that says 'DO NOT ENTER'. Clearly, Cropsey woulnd't be stupid enough to go through that door right? \n1 - Go to the box\n2 - Go into the 'DO NOT ENTER' door \n3 - Go back to the previous room and through the right door."
+				Chest1: .asciiz "Narrator: Cropsey approaches the chest. It's just a closed chest with a broken lock on it. Clearly nothing suspiscous about this randomly placed chest and the contents which are inside of it. Will Cropsey decide to look inside this mysterious chest or just leave it be? This could be the most important decision in his life.\n1 - Open the box. \n2 - Go through the 'DO NOT ENTER'\n3 - Go back to the previous room and through the right door."
+					Chest2: .asciiz "Narrator: Cropsey slowly opens the chest and hears a beeping noise start. There was a bomb inside the chest! Immediately right after the doors on both sides closed shut. Cropsey was trapped and the only way was to disable the bomb. Crospey took a closer look at the bomb and saw 5 different colored wires and scissors next to the bomb. He only has one chance to cut the correct wire to disable the bomb or else he will die! I believe cutting the red wire is always the correct one \n1 - Cut the Red wire \n2 - Cut the Blue wire\n3 - Cut the Yellow Wire\n4 - Cut the Green wire\n5 Cut the Black wire"
+						
+						RedWire: .asciiz "Narrator: "
+						BlueWire: .asciiz "Narrator: "
+						YellowWire: .asciiz "Narrator: "
+						GreenWire: .asciiz "Narrator: "
+						BlackWire: .asciiz "Narrator: "
+						
+						
+						
+		
 		
 		RTable: .asciiz "Narrator: "
 			RTable1: .asciiz "Narrator: "
@@ -172,15 +185,15 @@
 		li $v0, 51
 		syscall
 		la $a1, ($a0)
-		beq $a1, 1, nRDoor1
+		beq $a1, 1, ReElevator
 		beq $a1, 2, nRDoor2
 		beq $a1, 3, nRTable
 		beq $a1, 4, nRPlant
 	
 	
 			
-			nRDoor1:
-			la $a0, RDoor1
+			ReElevator:
+			la $a0, reElevator
 			li $v0, 51
 			syscall
 			la $a1, ($a0)
@@ -188,21 +201,21 @@
 			beq $a1, 2, nCloset1
 			
 			nRTable:
-			la $a0, RDoor1
+			la $a0, RTable
 			li $v0, 51
 			syscall
 			la $a1, ($a0)
 			
 	
 			nRPlant:
-			la $a0, RDoor1
+			la $a0, RPlant
 			li $v0, 51
 			syscall
 			la $a1, ($a0)
 			
 			
-			nRDoor2:
-			la $a0, RDoor2
+			nEmptyRoom:
+			la $a0, EmptyRoom
 			li $v0, 51
 			syscall
 			la $a1, ($a0)
