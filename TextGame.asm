@@ -74,26 +74,26 @@
 							baseArt: .asciiz "Narrator: Cropsey approaches the art and explores the greek statues and paintings that line the walls. \n1 - Go through the doorway \n2 - Rest in the bed"
 							baseKitch1: .asciiz "Narrator: Cropsey approaches the doorway and pears into it. It opens to a kitchen and a grand dining room with a table meant for many more than just he. The table has a meal already prepared and a single plate served, a single plate for Cropsey. \n1 - Sit at the table and dine \n2 - Head into the kitchen and prepare your own meal \n3 - Return to the previous room"
 								baseKitch2: .asciiz "Narrator: Cropsey uneased by the lone plate, decides he would much rather prepate his own meal than indulge in the meal that was obviously prepared for him. \n1 - Search the kitchen \n2 - Go back to the table and indulge in the meal layed out on the table."
-									BaseKitch3: .asciiz "Narrator: Cropsey searches the kitchen in hopes of finding anything to prepare a simple meal for himself but finds nothing of use. With his stomach grumbling, Cropsey decides to indulge himself in the food that lays on the table. \n1 - Leave the kitchen hungry \n2 - Indulge in the meal layed out on the table."
+									baseKitch3: .asciiz "Narrator: Cropsey searches the kitchen in hopes of finding anything to prepare a simple meal for himself but finds nothing of use. With his stomach grumbling, Cropsey decides to indulge himself in the food that lays on the table. \n1 - Leave the kitchen hungry \n2 - Indulge in the meal layed out on the table."
 								leavingKitch: .asciiz "Narrator: Cropsey, not wanting to deal with kitchen and the food, decides he would just rahter leave it be, left to rot away for now. Cropsey steps back into the main room. \n1 - Examine the art along the walls \n2 - Rest in the bed "
-								eatingKitch1: .asciiz "Narrator: Cropsey, with his stomach grumbling, gives into his desires and goes to sit at the table and feast on the meal. An entire roasted pig with the cliche apple in its mouth peacfully lays in the middle of the table, already carved into. Various side dishes surround the pig, all of which seemed to have been served to Cropsey already. Cropsey unneeding to serve himself begins indulging himself in the meal. \n1 - Continue eating \n2 - Stop after you feel you've had enough"
-									eatingKitch2: .asciiz "Narrator: Cropsey ubable to get his fillin', continues eating. Eating to a degree of a animal, vigorously grabbing at various food items with his bare hands, crawling onto the table to reach food that was out of his reach. Unbeknownst to Cropsey, the food was having an unforseen effect on him; turning him into an aniaml, turning him into the pig that he himself indulged on. Cropseys movements began to slow as he continued to feast, slowly drifting into a dream; collapsing onto the corpse of the pig he had devoured. While the pig dreamt, he was slaughtered and prepared into the very meal that he had devoured. To be eaten again by himself, Cropsey, in the next cycle of the room"
+								eatingKitch1: .asciiz "Narrator: Cropsey, with his stomach grumbling, gives into his desires and goes to sit at the table and feast on the meal. An entire roasted pig with the cliche apple in its mouth peacfully lays in the middle of the table, already carved into.\n Various side dishes surround the pig, all of which seemed to have been served to Cropsey already. Cropsey unneeding to serve himself begins indulging himself in the meal. \n1 - Continue eating "
+									eatingKitch2: .asciiz "Narrator: Cropsey ubable to get his fillin', continues eating. Eating to a degree of a animal, vigorously grabbing at various food items with his bare hands, crawling onto the table to reach food that was out of his reach. \nUnbeknownst to Cropsey, the food was having an unforseen effect on him; turning him into an aniaml, turning him into the pig that he himself indulged on. Cropseys movements began to slow as he continued to feast,\n slowly drifting into a dream; collapsing onto the corpse of the pig he had devoured. While the pig dreamt, he was slaughtered and prepared into the very meal that he had devoured. To be eaten again by himself,\n Cropsey, in the next cycle of the room"
 									#Finished
 							baseBed1: .asciiz "Narrator: Cropsey decides to try to have a rest in hopes of escaping this peculiar dream. Upon waking up, Cropsey seems to have lost all sense of time and how long he was asleep. At the foot of the bed stands a large, ominous, black monolith seemingly wathcing over Cropsey \n1 - Go back to sleep in an atempt to escape the 'dream' \n2 - Get out of bed and aproach the monolith"
-								baseBed2: .asciiz "Narrator: Cropsey goes back to bed in an atempt to escape but upon waking up the monolith remains \n1 - Try once again to go back to sleep \n2 - Give in to the monolith and aproach it"
+								baseBed2: .asciiz "Narrator: Cropsey goes back to bed in an attempt to escape but upon waking up the monolith remains \n1 - Try once again to go back to sleep \n2 - Give in to the monolith and aproach it"
 									baseBed3: .asciiz "Narrator: Cropsey once again tries to go back to sleep but yet again, when he wakes up, the inescapable monolith remained \n1 - Try once again to go back to sleep \n2 - Give in to the monolith and aproach it"
 										baseBed4: .asciiz "Narrator: Cropsey, twirling on the edge of insanity, attempts to find comfort within his dreams but his mind begins to flood with images of the monolith... Cropsey finds that he has no other choice... \n1 - Approach the monolith"
 							baseMono1: .asciiz "Narrator: Cropsey slowly approaches towards the monolith. Cropsey being drawn to it, stands at the foot of the monolith, it towering over him. As the temperature seems to drop, Cropsey's breath leaveing a blur of condensation on the monolith. \n1 - Reach out and touch the monolith \n2 - Leave it alone and go about your new life in this room"
 								#touching the monolith
 								#MONOLITH ENDING
-								baseMono2: .asciiz "Narrator: Cropsey reaches out and touches the monolith, the moment he touches the monolith, it disappears and an endless void seems to surround him. Cropsey finds himself alone, seemingly floating, in this endless void. Cropsey closes his eyes for awhile, scared to his fate unable to accept it for what it is. Upon opening his eyes, Cropsey is greeted with a field of flowers. However, Cropsey, unbeknownst, to him couldn't move, couldn't blink, couldn't breathe, couldn't think. Cropsey had become a flower in the very field, left to feed the bees, untill his flower body withers away."
+								baseMono2: .asciiz "Narrator: Cropsey reaches out and touches the monolith, the moment he touches the monolith, it disappears and an endless void seems to surround him. Cropsey finds himself alone, seemingly floating, in this endless void.\n Cropsey closes his eyes for awhile, scared to his fate unable to accept it for what it is. Upon opening his eyes, Cropsey is greeted with a field of flowers. However, Cropsey, unbeknownst, to him couldn't move, couldn't blink,\n couldn't breathe, couldn't think. Cropsey had become a flower in the very field, left to feed the bees, untill his flower body withers away."
 								#Trying to leave
 								baseFloor: .asciiz "Narrator: Cropsey decides he wants nothing to do with the monolith and decides he'd rather just live with the thing watching over him. As Cropsey turned to leave, he discovered his feet that were once his own, were now becoming apart of the floor. Unable to escape, Cropsey had to deal with the monolith. \n1 - Reach out and touch the monolith \n2 - Stand there forever"
 									#Standing there
 									#If touching it go to baseMono2 -> which is touching the monolith
 									baseFloor1: .asciiz "Narrator: Cropsey being a stubborn little bugger, chose to stand there, slowly sinking, slowly becoming apart of the floor, slowly becoming the room. Cropsey with his arms crossed seems to not relize that this will be his last chance to embrace the monolith and whatever it will do to him. \n1 - Reach out and touch the monoltih \n2 - Become the room"
 										#ROOM ENDING
-										baseFloor2: .asciiz "Narrator: Cropsey embraces the idea of becoming the room. If it meant escaping the monolith, than it was the best choice he could make. Cropsey slowly begins sinking further and further, slowly becoming apart of the room. As Cropsey becomes no more, the monolith begins to dissapere, the room is left empty without a Cropsey or a monoltih. Suddenly a ding is heard and the elevatore reappears, from it steps Cropsey and a familiar voice is heard... "
+										baseFloor2: .asciiz "Narrator: Cropsey embraces the idea of becoming the room. If it meant escaping the monolith, than it was the best choice he could make. Cropsey slowly begins sinking further and further, slowly becoming apart of the room.\n As Cropsey becomes no more, the monolith begins to dissapere, the room is left empty without a Cropsey or a monoltih. Suddenly a ding is heard and the elevatore reappears, from it steps Cropsey and a familiar voice is heard... "
 									#Finished
 		#Daylins edits 10-13-17 : "
 				
@@ -124,8 +124,8 @@
 			LPlant1: .asciiz "Narrator: It's just a plain old plant"
 		
 	#Right Pathway			
-	RightNarr1: .asciiz "Narrator: Okay...it seems like Cropsey has walked through the door on the right when he was supposed to walk through the left one. That's fine. He is just a bit lost. Now he is in another room with two doors. If he just goes through the door on the left he can go back on the path to his desk \n1 - Go through the door on the left\n2 - Go through the door on the right\n3 - Approach the table in the center of the room\n4 - Approach the plant in the corner"
-		RDoor1: .asciiz "Narrator: "
+	RightNarr1: .asciiz "Narrator: Cropsey decided that he wanted to go through the right door. It just seems like he is a little lost. Now he is in an empty room with a table in the middle and a plant in the corner. Cropsey just needs to take the left door to go back on his way towards his office.\n1 - Go through the door on the left\n2 - Go through the door on the right\n3 - Approach the table in the center of the room\n4 - Approach the plant in the corner"
+		RDoor1: .asciiz "Narrator: Cropsey goes through the left door and is now in a hallway with an elevator. Cropsey will take the elevator up a floor where his office is located. \n1 - Take the elevator. \n2 - Walk into the broom closet next to the elevator."
 		
 		RDoor2: .asciiz "Narraotr: "
 		
@@ -164,6 +164,55 @@
 	la $a1, ($a0)
 	beq $a1, 1, Left1
 	beq $a1, 2, Right1
+	
+	
+		#Right Pathway		
+		Right1:
+		la $a0, RightNarr1
+		li $v0, 51
+		syscall
+		la $a1, ($a0)
+		beq $a1, 1, nRDoor1
+		beq $a1, 2, nRDoor2
+		beq $a1, 3, nRTable
+		beq $a1, 4, nRPlant
+	
+	
+			
+			nRDoor1:
+			la $a0, RDoor1
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+			beq $a1, 1, nElevator
+			beq $a1, 2, nCloset1
+			
+			nRTable:
+			la $a0, RDoor1
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+			
+	
+			nRPlant:
+			la $a0, RDoor1
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+			
+			
+			nRDoor2:
+			la $a0, RDoor2
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+	
+	
+	
+	
+	
+	
+	
 	
 		#Left Pathway
 		Left1:
@@ -430,16 +479,138 @@
 							b nUp
 							
 							nBase2:
-							la $a0, base1
+							la $a0, base2
 							li $v0, 51
 							syscall
 							la $a1, ($a0)
 							beq $a1, 1, nKitch1
-							beq $a1, 2, nBaseBed1
-							beq $a1, 3, nBaseArt
-					
-					
-					
+							beq $a1, 2, nBaseArt
+							beq $a1, 3, nBaseBed1
+								
+								nBaseArt:
+								la $a0, baseArt
+								li $v0, 51
+								syscall
+								la $a1, ($a0)
+								beq $a1, 1, nKitch1
+								beq $a1, 2, nBaseBed1
+								
+								#Kitchen
+								nKitch1:
+								la $a0, baseKitch1
+								li $v0, 51
+								syscall
+								la $a1, ($a0)
+								beq $a1, 1, nEatKitch1
+								beq $a1, 2, nKitch2
+								beq $a1, 3, nLeaveKitch
+								
+									nKitch2:
+									la $a0, baseKitch2
+									li $v0, 51
+									syscall
+									la $a1, ($a0)
+									beq $a1, 1, nKitch3
+									beq $a1, 2, nEatKitch1
+										
+										nKitch3:
+										la $a0, baseKitch3
+										li $v0, 51
+										syscall
+										la $a1, ($a0)
+										beq $a1, 1, nLeaveKitch
+										beq $a1, 2, nEatKitch1
+										
+									nEatKitch1:
+									la $a0, eatingKitch1
+									li $v0, 51
+									syscall
+									la $a1, ($a0)
+									beq $a1, 1, nEatKitch2
+									
+									
+										nEatKitch2:
+										la $a0, eatingKitch2
+										li $v0, 50
+										syscall
+										b End
+								
+								nLeaveKitch:
+								la $a0, leavingKitch
+								li $v0, 51
+								syscall
+								la $a1, ($a0)
+								beq $a1, 1, nBaseArt
+								beq $a1, 2, nBaseBed1
+									
+									#Monolith Room
+									nBaseBed1:
+									la $a0, baseBed1
+									li $v0, 51
+									syscall
+									la $a1, ($a0)
+									beq $a1, 1, nBaseBed2
+									beq $a1, 2, nMonolith1
+									
+										nBaseBed2:
+										la $a0, baseBed2
+										li $v0, 51
+										syscall
+										la $a1, ($a0)
+										beq $a1, 1, nBaseBed3
+										beq $a1, 2, nMonolith1
+										
+											nBaseBed3:
+											la $a0, baseBed3
+											li $v0, 51
+											syscall
+											la $a1, ($a0)
+											beq $a1, 1, nBaseBed4
+											beq $a1, 2, nMonolith1
+										
+												nBaseBed4:
+												la $a0, baseBed4
+												li $v0, 51
+												syscall
+												la $a1, ($a0)
+												beq $a1, 1, nMonolith1
+									#Monolith Ending
+									nMonolith1:
+									la $a0, baseMono1
+									li $v0, 51
+									syscall
+									la $a1, ($a0)
+									beq $a1, 1, nMonolith2
+									beq $a1, 2, nBaseFloor
+									
+										nMonolith2:
+										la $a0, baseMono2
+										li $v0, 50
+										syscall
+										b End
+										
+										
+										nBaseFloor: 
+										la $a0, baseFloor
+										li $v0, 51
+										syscall
+										la $a1, ($a0)
+										beq $a1, 1, nMonolith2
+										beq $a1, 2, nBaseFloor2
+										
+											#Room Ending
+											nBaseFloor2: 
+											la $a0, baseFloor2
+											li $v0, 50
+											syscall
+											b End
+											
+										
+										
+										
+												
+										
+									
 					
 			#Table and Plant								
 			nLeftTable:
@@ -603,11 +774,7 @@
 																			beq $a1, 2, nLHallway1
 																			beq $a1, 3, Terminate
 			
-	#Right Pathway		
-	Right1:
-	la $a0, RightNarr1
-	li $v0, 51
-	syscall
+	
 
 
 
