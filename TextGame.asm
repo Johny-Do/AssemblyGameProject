@@ -15,7 +15,7 @@
 		LHallway1: .asciiz "Narrator: Cropsey makes his way down the hallway and has entered a room with an elevator. He needs to take the elevator up on floor which is where his office will be. \n1 - Take the elevator \n2 - Go into the broom closet on the left"
 		
 		
-			Elevator: .asciiz "Narrator: Cropsey pushes the button to go up to the floor his office is on. \n1 - Up \n2- Down"
+			Elevator: .asciiz "Narrator: Cropsey enters the elevator with the options to go up or down. Cropsey needs to push the up button to go up to the floor his office is on. \n1 - Up \n2- Down"
 			Elevator2: .asciiz "Narrator: Cropsey goes back to the elevator and goes up to the floor where his office is on. "
 				eUp: .asciiz "Narrator: The elevator takes Cropsey up a floor and just outside of the elevator is now the cafeteria. He makes his way across the cafeteria and down a hallway towards his office. \n1 - Leave Cafeteria \n2 - Go to register"
 				eUp2: .asciiz "Narrator: The elevator takes Cropsey up a floor and just outside of the elevator is now the cafeteria. He makes his way across the cafeteria and down a hallway towards his office. \n1 - Leave Cafeteria"
@@ -36,9 +36,40 @@
 										FalseCode3: .asciiz "Narrator: Wrong again! Cropsey has no more tries. He panics as he accepts his inevitable fate as the police charge in and arrest him"		
 								Game: .asciiz "Narrator: Cropsey decides to take the risk of playing the game. The terminal will generate a random number between 0 and 100. If the number is under 50, Cropsey loses and will be caught by the police and taken to jail. If the number is 50 or over, then Cropsey wins, the alarms will stop and he will be saved. "
 									Win: .asciiz "Narrator: Cropsey wins!! Overjoyed, he falls to his knees crying, relieved at the fact tha the is safe. Now he is going to make his way back to his office."
-									Lose: .asciiz "Narrator: Cropsey loses!! Terrified, he crawls to a corner in denial awaiting his fate. "
+									
 									
 		#Jail Pathway
+									LoseGame: .asciiz "Narrator: As Cropsey presses enter the computer starts loading looking as if Cropsey won the game. But he didn't, suddenly the computer locks itself and Cropsey is unable to interact with the computer in any way. With the alarm still going off, Cropsey knew that the police would be here at any moment now. Turning himeself in would be the right thing for Cropsey to do. \n1 - Wait and turn yourself in once they arrive \n2 - Prepare to fight, arming yourself with office supplies. \n3 - Hide in an attempt to escape the police"
+									Codefail: .asciiz "Narrator: As Cropsey presses enter the computer starts loading looking as if Cropsey finally put the correct password in. But he didn't, suddenly the computer locks itself and Cropsey is unable to interact with the computer in any way. With the alarm still going off, Cropsey knew that the police would be here at any moment now. Turning himeself in would be the right thing for Cropsey to do. \n1 - Wait and turn yourself in once they arrive \n2 - Prepare to fight, arming yourself with office supplies. \n3 - Hide in an attempt to escape the police"
+										fight: .asciiz "Narrator: With the alarm blaring throughout the entire building, Cropsey wasn't prepared to go down without a fight. He wasn't going to jail, not again. \n1 - Wait around for them \n2 - Find a weapon to use \n3 - Compose an ambush"
+										
+											aFight: .asciiz "Narrator: Cropsey stands his ground facing the door, armed with his two trusty fists, prepares for the police to come and subdue him. The police can be heard clearing rooms; they are only a few rooms down, hastily moving closer untill they are right outside. Cropsey takes a fighting stance, when the door is kicked down and the police armed to the teeth flood in. \n1 - Attack the closest guy \n2 - Hopscotch on their heads like in the movies \n2 - Go in swinging"
+												aFightA: .asciiz "Narrator: Cropsey lunges at the closest guard in hopes that his momentum is enough to make up for his lack of strenght, it wasn't. Cropsey's fist collides with the officers face, unfazed, he grabs Cropsey and throws him to thr ground, knocking him unconscious. Crposey is then promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												aFightB: .asciiz "Narrator: As the officers pour in, Cropsey notices a once in a lifetime opportunity, the group of police officers lined up perfectly for him to hop from each of the heads; the ultimate combo. Cropsey sprints a short distance, jumping on to the head of the officer in the front; unable to get enough force to jump again, Cropsey falls onto the floor knocking him unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												aFightC: .asciiz "Narrator: With eyes closed and fist clenched, Cropsey begans swinging his fist like a windmill; a faint wooshing sound comes from the death-mill. Cropsey moves foward unleashing his fury on the police. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												
+											bFight: .asciiz "Narrator: Cropsey quikly checks his surroundings looking for anything that could prove usefull in a fight. The police can be heard clearing rooms; they are only a few rooms down, hastily moving closer untill they are right outside. Cropsey must move fast. \n1 - Look around the desk with the computer \n2 - Look in the lockers by the desk \n3 - Look down"
+												bFightA .asciiz "Narrator: Cropsey runs to the computer desk frantically searching around and in the desk but finds nothing. The door swings open and Cropsey is caught with his pants down. The police run toward him and smack him with the butt of their guns. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												bFightB .asciiz "Narrator: Copsey jumps toward the locker swinging it open, within it lies a staff, two pistols, and a couple of useless orbs. \n1 - Take the staff labeled the 'Caduceus staff' \n2 - Take the pistols labeled 'pulse pistols' \n3 - Take the orbs labeled 'the orbs of harmony and discord'"
+													mercy .asciiz "Narrator: Cropsey picks up the staff just in time as the door swings open. Cropsey points the staff towards the officers, they flinch and brace for impact but are surprisingly met with a pleasent healing beam coming from the staff. The officers confused begin laughing at the poor boosted Cropsey. Once their laughing fit subsided, they walk over and smack him with the butt of their guns. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+													tracer .asciiz "Narrator: Cropsey picks up the two pistols just in time as the door swings open. Cropsey points the pistols towards the officers and proceeds to 'one clips' all of them, while doing so Cropsey is unable to resist the urge to say 'cheers love the cavalry's here'. The officers lay in a pile of despair and salt, for those two pistols were absolutely busted, Cropsey was the most over powered character in the game \n1 - leave the room your in"
+													zenyatta .asciiz "Narrator: Cropsey picks up as many orbs as he could before the door swung open. Cropsey turns and begins chucking the orbs at the officers, upon impact they bounce off and fall to the floor. Cropsey and the officers share in an awkward moment, staring at one another as the faint sound of metal balls rolling across floor is heard. To break the awkward silence the officer that was hit by the balls, picks one up and throws it back at Cropsey with little to no force. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												bFightC .asciiz "Narrator: Cropsey looks down and sees his to his fist, these shall be my weapons of choice Cropsey chuckles. Cropsey charges up his fist preparing for the door to open. The door than swings open and Cropsey charges foward but is met with the butt of a gun. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode."
+												
+											cFight:  .asciiz "Narrator: Cropsey being familiar with the art of guerrilla warfare, sets up an ambush waiting for the police. Cropsey hides behind the door in preparation of their arrival. It's not long untill their presence is heard, they're boots stomping from room to room as they clear them out. Fially they reach the room Cropsey lies in wait, the door swings upon and the police tacticaly flood into the room. \n1 - Tackle the closest guy and steal their weapon \n2 - Tackle the smallest guy and steal their weapon \n3 - Run out swinging"
+												cFightA: .asciiz "Narrator: Cropsey runs at the closest guy, which happends to be the biggest, in an attemp to tackle him to the ground, however upon contact the officer doesn't even seem to budge an inch. Cropsey quickly tries to wrestle the officers weapon away but fails miserably. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												cFightB: .asciiz "Narrator: Cropsey waits for the smallest officer to enter the room. When who, Cropsey thinks, the smallest guy walks in. Cropesy breaks into a sprint towards him in an attemp to tackle him to the ground, however upon contact the officer doesn't even seem to budge an inch. Cropsey quickly tries to wrestle the officers weapon away but fails miserably. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												cFightC: .asciiz "Narrator: With eyes closed and fist clenched, Cropsey begans swinging his fist like a windmill; a faint wooshing sound comes from the death-mill. Cropsey moves foward unleashing his fury on the police. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+												
+										hide: .asciiz "Narrator: With the alarm blaring throughout the entire building; Cropsey, scared of what he has become, hides out of pure fear. Suddenly the police can be heard only a few rooms down, they're moving fast towards Cropsey. \n1 - Hide in the locker next to the computer \n2 - Hide under the table \n3 - Hide behind your hands"
+											hideA: .asciiz "Narrator: Cropsey looks to the lockers that line the wall, Cropsey jumps into the one that is already slightly open and closes it. The door swings open and the police swarm in. The police instantly notice the locker door that isn't fully shut with the frightened Cropsey slightly sticking out unable to fit compleatly in the locker. Laughing, the officers approach the locker and pull Cropsey out throwing him to ground. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+											hideB: .asciiz "Narrator: Cropsey looks to the table with the computer and notices that he could probaly fit under it, he rushes towards it and slides under it giving himself rugburn, way to go Cropsey. The door swings open and the police swarm in, they instanly notice the fully grown man under the table shivering in fear. Laughing, the officers approach the table and pull Cropsey out, standing him up and then promptly throwing him to ground. Whitin an instant blackness surrounds him, met with dreams as he's knocked unconscious. His limp body is promptly taken to prison and thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+											hideC: .asciiz "Narrator: Cropsey looks around in a panic unable to decide where to hide, the officers are kicking the door in an attempt to bust it open. Cropsey, in a last ditch effort crouches down and hides behind his hands. Obviously the officers are unable to see Cropsey since Cropsey himself can't see the officers. They clear the room, and leave cropsey sitting their. Cropsey peeks from his hands and fnds himself alone, but not caught, this was a victory Cropsey would charish forever. \n1 - leave the room your in"
+											
+										giveIn: .asciiz "Narrator:With the alarm blaring throughout the entire building; Cropsey, filled with guilt for the crime he has commited, decided to turn himself in. \n1 - Wait patiently for the police to arrive \n2 Steal more food while you wait cause why not"
+											waitGiveup: .asciiz "Narrator: Cropsey being the good noodle that he is, despite being a worthless theif, sat patiently on the black couch with a camera affixed to him waiting for the police to arrive. When the police do arrive, they are pleasantly suprised to find Cropsey waiting for them. They promptly take him and to prison and throw him into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+											stealGiveup: .asciiz "Narrator: Cropsey was already set on going to jail, he decided that he would go and steal some more snacks solely on the idea of what more harm could be done. On his way back to the cafeteria, Cropsey happends to run into the police looking for him. Cropsey asks them nicely if he could steal some snacks for the trip, the police comply; he is going to jail afterall. Cropsey munches all the way to jail and is then thrown into a lonely cell reaking of melancholy \n1 - Look around your new humble abode"
+		
 		
 		
 					#Office Pathways
@@ -127,18 +158,28 @@
 	RightNarr1: .asciiz "Narrator: Cropsey decided that he wanted to go through the right door. It just seems like he is a little lost. Now he is in an empty room with a table in the middle and a plant in the corner. Cropsey just needs to take the left door to go back on his way towards his office.\n1 - Go through the door on the left\n2 - Go through the door on the right\n3 - Approach the table in the center of the room\n4 - Approach the plant in the corner"
 		reElevator: .asciiz "Narrator: Cropsey goes through the left door and is now in a hallway with an elevator. Cropsey will take the elevator up a floor where his office is located. \n1 - Take the elevator. \n2 - Walk into the broom closet next to the elevator."
 		
-		EmptyRoom: .asciiz "Narrator: It seems that Cropsey has no sense of direction at all. I guess his puny brain can't determine the difference between left and right. Now Cropsey is in yet another empty room with two doors in front of him. Let's see if he is able to go through the right door now. Cropsey, go through the right door. \n Go through the right door \n Go through the left door "
-			BombRoom: .asciiz "Narrator: Are you doing this just to spite me, Cropsey? What exactly are you trying to acheive by disobeying me? I thought maybe you just really liked right doors but it seems you just want to anger me. Well, what is Cropsey going to do now. He's in a room with a chest in the center and door behind it that says 'DO NOT ENTER'. Clearly, Cropsey woulnd't be stupid enough to go through that door right? \n1 - Go to the box\n2 - Go into the 'DO NOT ENTER' door \n3 - Go back to the previous room and through the right door."
-				Chest1: .asciiz "Narrator: Cropsey approaches the chest. It's just a closed chest with a broken lock on it. Clearly nothing suspiscous about this randomly placed chest and the contents which are inside of it. Will Cropsey decide to look inside this mysterious chest or just leave it be? This could be the most important decision in his life.\n1 - Open the box. \n2 - Go through the 'DO NOT ENTER'\n3 - Go back to the previous room and through the right door."
-					Chest2: .asciiz "Narrator: Cropsey slowly opens the chest and hears a beeping noise start. There was a bomb inside the chest! Immediately right after the doors on both sides closed shut. Cropsey was trapped and the only way was to disable the bomb. Crospey took a closer look at the bomb and saw 5 different colored wires and scissors next to the bomb. He only has one chance to cut the correct wire to disable the bomb or else he will die! I believe cutting the red wire is always the correct one \n1 - Cut the Red wire \n2 - Cut the Blue wire\n3 - Cut the Yellow Wire\n4 - Cut the Green wire\n5 Cut the Black wire"
+		EmptyRoom: .asciiz "Narrator: It seems that Cropsey has no sense of direction at all. I guess his puny brain can't determine the difference between left and right. Now Cropsey is in yet another empty room with two doors in front of him. Let's see if he is able to go through the right door now. Cropsey, go through the right door. \n1 - Go through the right door \n2 - Go through the left door "
+			BombRoom: .asciiz "Narrator: Are you doing this just to spite me, Cropsey? What exactly are you trying to acheive by disobeying me? I thought maybe you just really liked right doors but it seems you just want to anger me. Well, what is Cropsey going to do now.\n He's in a room with a chest in the center, a door behind it that says 'DO NOT ENTER' and to the left of the chest is a door that leads to a spiraling staircase. Clearly, Cropsey woulnd't be stupid enough to go through that door right? \n1 - Go to the chest\n2 - Go into the 'DO NOT ENTER' door \n3 - Go up the staircase"
+				Chest1: .asciiz "Narrator: Cropsey approaches the chest. It's just a closed chest with a broken lock on it. Clearly nothing suspiscous about this randomly placed chest and the contents which are inside of it.\n Will Cropsey decide to look inside this mysterious chest or just leave it be? This could be the most important decision in his life.\n1 - Open the chest. \n2 - Go through the 'DO NOT ENTER' door\n3 - Go up the spiraling staircase"
+					Chest2: .asciiz "Narrator: Cropsey slowly opens the chest and hears a beeping noise start. There was a bomb inside the chest! Immediately afterwards, steel doors close shut the doors on both sides. Cropsey was trapped and the only way was to disable the bomb.\n Crospey took a closer look at the bomb and saw 5 different colored wires and scissors next to the bomb. The bomb was already ticking with 2 minutes to detonate. He only has one chance to cut the correct wire to disable the bomb or else he will die!\n I believe cutting the red wire is always the correct one \n1 - Cut the Red wire \n2 - Cut the Blue wire\n3 - Cut the Yellow Wire\n4 - Cut the Green wire\n5 Cut the Black wire"
 						
-						RedWire: .asciiz "Narrator: "
-						BlueWire: .asciiz "Narrator: "
-						YellowWire: .asciiz "Narrator: "
-						GreenWire: .asciiz "Narrator: "
-						BlackWire: .asciiz "Narrator: "
+						RedWire: .asciiz "Narrator: Ha, you actually cut the red wire! How gullible can you be?The bomb timer quickly changed all the way down to 20 seconds! Cropsey is now trapped inside the bomb room with no where to run. How will Cropsey survive this? /n1 - Attempt to break the door behind you. /n2 - Curl up in a ball and await your death"
+						BlueWire: .asciiz "Narrator: Cropsey cuts the blue wire. The bomb timer quickly changed all the way down to 20 seconds! It was the wrong wire! Cropsey is now trapped inside the bomb room with no where to run. How will Cropsey survive this? /n1 - Attempt to break the door behind you. /n2 - Curl up in a ball and await your death"
+						YellowWire: .asciiz "Narrator: Cropsey cuts the yellow wire. The bomb timer quickly changed all the way down to 20 seconds! It was the wrong wire! Cropsey is now trapped inside the bomb room with no where to run. How will Cropsey survive this? /n1 - Attempt to break the door behind you. /n2 - Curl up in a ball and await your death"
+						GreenWire: .asciiz "Narrator: Cropsey cuts the green wire. The bomb timer quickly changed all the way down to 20 seconds! It was the wrong wire! Cropsey is now trapped inside the bomb room with no where to run. How will Cropsey survive this? /n1 - Attempt to break the door behind you. /n2 - Curl up in a ball and await your death"
+						BlackWire: .asciiz "Narrator: Cropsey cuts the black wire. The bomb timer turned off. It was the correct wire! Cropsey cries with relief. The doors on both sides open up again. \n1 - Go through the door that says 'DO NOT ENTER' \n2 - Go up the spiraling staircase"
 						
+							 #Bomb Ending
+							 NoHope: .asciiz "Narrator: Cropsey turns and runs towards the steel door banging on it with his hands attempting to break through but has no success. Cropsey gives up and crawls into a ball and lays on the ground. \nWhen the bomb timer reaches zero, Cropesy sees a bright light flash before his eyes right before the end of his life."
+							 LostHope: .asciiz "Narrator: Cropsey crawls into a ball and lays on the ground. When the bomb timer reaches zero, Cropesy sees a bright light flash before his eyes right before the end of his life."
+							 #End
+							 
 						
+				DONOTENTER: .asciiz "Narrator: "
+				
+				StairCase: .asciiz "Narrator: "
+						
+			Wardrobe: .asciiz "Narrator: "			
 						
 		
 		
@@ -146,10 +187,12 @@
 			RTable1: .asciiz "Narrator: "
 			RTable2: .asciiz "Narrator: "
 			RTable3: .asciiz "Narrator: "
-		RPlant: .asciiz "Narrator: "
+			
+			
+		RPlant: .asciiz "Narrator: Cropsey decides to approach the plant in the corner. It was just a regular plant with a sturdy stem and a single long leaf. \n1 - Examine \n2 - Leave"
 			RPlant1: .asciiz "Narrator: "
-			RPlant2: .asciiz "Narrator: "
-			RPlant3: .asciiz "Narrator: "
+				RPlant2: .asciiz "Narrator: "
+					RPlant3: .asciiz "Narrator: "
 		
 		
 		
@@ -186,7 +229,7 @@
 		syscall
 		la $a1, ($a0)
 		beq $a1, 1, ReElevator
-		beq $a1, 2, nRDoor2
+		beq $a1, 2, nEmptyRoom
 		beq $a1, 3, nRTable
 		beq $a1, 4, nRPlant
 	
@@ -219,14 +262,110 @@
 			li $v0, 51
 			syscall
 			la $a1, ($a0)
+			beq $a1, 1, nWardrobe
+			beq $a1, 2, nBombRoom
+			
+				nBombRoom:
+				la $a0, BombRoom
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nChest
+				beq $a1, 2, nDONOTENTER
+				beq $a1, 3, nStairCase
+				
+					nChest:
+					la $a0, Chest1
+					li $v0, 51
+					syscall
+					la $a1, ($a0)
+					beq $a1, 1, nChest2
+					beq $a1, 2, nDONOTENTER
+					beq $a1, 3, nStairCase
+						
+						nChest2:
+						la $a0, Chest2
+						li $v0, 51
+						syscall
+						la $a1, ($a0)
+						beq $a1, 1, nRedWire
+						beq $a1, 2, nBlueWire
+						beq $a1, 3, nYellowWire
+						beq $a1, 4, nGreenWire
+						beq $a1, 5, nBlackWire
+	
+							nRedWire:
+							la $a0, RedWire
+							li $v0, 51
+							syscall
+							la $a1, ($a0)
+							beq $a1, 1, nNoHope
+							beq $a1, 2, nLostHope
+							
+							nBlueWire:
+							la $a0, BlueWire
+							li $v0, 51
+							syscall
+							la $a1, ($a0)
+							beq $a1, 1, nNoHope
+							beq $a1, 2, nLostHope
+	
+							nYellowWire:
+							la $a0, YellowWire
+							li $v0, 51
+							syscall
+							la $a1, ($a0)
+							beq $a1, 1, nNoHope
+							beq $a1, 2, nLostHope
+							
+							nGreenWire:
+							la $a0, GreenWire
+							li $v0, 51
+							syscall
+							la $a1, ($a0)
+							beq $a1, 1, nNoHope
+							beq $a1, 2, nLostHope
+								
+								nNoHope:
+								la $a0, NoHope
+								li $v0, 50
+								syscall
+								b End
+								
+								nLostHope:
+								la $a0, LostHope
+								li $v0, 50
+								syscall
+								b End
+							
+							nBlackWire:
+							la $a0, RedWire
+							li $v0, 51
+							syscall
+							la $a1, ($a0)
+							beq $a1, 1, nDONOTENTER
+							beq $a1, 2, nStairCase
+					
+					nDONOTENTER:
+					la $a0, DONOTENTER
+					li $v0, 51
+					syscall
+					
+					nStairCase:
+					la $a0, StairCase
+					li $v0, 51
+					syscall
 	
 	
-	
-	
-	
-	
-	
-	
+			nWardrobe:
+			la $a0, Wardrobe
+			li $v0, 51
+			syscall
+					
+					
+					
+					
+					
 		#Left Pathway
 		Left1:
 		la $a0, LeftNarr1
@@ -333,15 +472,9 @@
 											syscall
 											la $a1, ($a0)
 											beq $a1, 7358, nCode2
-											bne $a1, 7358, nFCode3
+											bne $a1, 7358, nCodeFail
 											
-												nFCode3:
-												la $a0, FalseCode3
-												li $v0, 51
-												syscall
-												la $a1, ($a0)
-												beq $a1, 7358, nCode2
-												bne $a1, 7358, nJail
+												
 									nGame:
 									la $a0, FalseCode3
 									li $v0, 42 
@@ -366,11 +499,148 @@
 										b nJail
 										
 	#Jail Path
-	nJail:
-	la $a0, FalseCode3
+	nCodeFail:
+	la $a0, CodeFail
 	li $v0, 51
 	syscall
 	la $a1, ($a0)
+	beq $a1, 1, nGiveIn
+	bne $a1, 2, nFight
+	bne $a1, 3, nHide
+	
+	nLoseGame:
+	la $a0, LoseGame
+	li $v0, 51
+	syscall
+	la $a1, ($a0)
+	beq $a1, 1, nGiveIn
+	beq $a1, 2, nFight
+	beq $a1, 3, nHide
+	
+		nFight:
+		la $a0, fight
+		li $v0, 51
+		syscall
+		la $a1, ($a0)
+		beq $a1, 1, nAFight
+		beq $a1, 2, nBFight
+		beq $a1, 3, nCFight
+		
+			nAFight:
+			la $a0, aFight
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+			beq $a1, 1, nAFightA
+			beq $a1, 2, nAFightB
+			beq $a1, 3, nAFightC
+			
+				nAFightA:
+				la $a0, aFightA
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+				nAFightB:
+				la $a0, aFightB
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+				nAFightC:
+				la $a0, aFightC
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+	
+			nBFight:
+			la $a0, bFight
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+			beq $a1, 1, nBFightA
+			beq $a1, 2, nBFightB
+			beq $a1, 3, nBFightC
+			
+			
+				nBFightA:
+				la $a0, bFightA
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+				nBFightB:
+				la $a0, bFightB
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nMercy
+				beq $a1, 1, nTracer
+				beq $a1, 1, nZenyatta
+				
+					nMercy:
+					la $a0, mercy
+					li $v0, 51
+					syscall
+					la $a1, ($a0)
+					beq $a1, 1, nHumbleAbode
+					
+					nTracer:
+					la $a0, tracer
+					li $v0, 51
+					syscall
+					la $a1, ($a0)
+					beq $a1, 1, nLeaveRoom
+					
+					nZenyatta:
+					la $a0, zenyatta
+					li $v0, 51
+					syscall
+					la $a1, ($a0)
+					beq $a1, 1, nHumbleAbode
+	
+				nBFightC:
+				la $a0, bFightC
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+				
+			nCFight:
+			la $a0, cFight
+			li $v0, 51
+			syscall
+			la $a1, ($a0)
+			beq $a1, 1, nCFightA
+			beq $a1, 2, nCFightB
+			beq $a1, 3, nCFightC
+			
+				nCFightC:
+				la $a0, cFightA
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+				nCFightC:
+				la $a0, cFightB
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
+				
+				nCFightC:
+				la $a0, cFightC
+				li $v0, 51
+				syscall
+				la $a1, ($a0)
+				beq $a1, 1, nHumbleAbode
 						
 						#Office Room
 						nOffice1:
