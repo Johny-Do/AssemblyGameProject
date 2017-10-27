@@ -189,11 +189,25 @@
 							 #End
 							 
 						
-				DONOTENTER: .asciiz "[Narrator]: Despite the warning sign, Cropsey decides to go through the potentially dangerous room. The room is nearly pitch black but as Cropsey steps forward the room lights up."
+				DONOTENTER: .asciiz "[Narrator]: The sign clearly says 'DO NOT ENTER' and yet Cropsey feels so inclined to go through it. I highly reccommend you do not go through the door Cropsey, it could lead to unwanted consequenses. \n1- Go through the door. \n2 - Go back and up the staircase \n3 - Go back to the chest"
+				DONOTENTER2: .asciiz "[Narrator]: The sign clearly says 'DO NOT ENTER' and yet Cropsey feels so inclined to go through it. I highly reccommend you do not go through the door Cropsey, it could lead to unwanted consequenses. \n1- Go through the door. \n2 - Go back and up the staircase"
+					ComputerRoom: .asciiz "[Narrator]: "
+				
 				
 				StairCase: .asciiz "[Narrator]: "
 						
-			Wardrobe: .asciiz "[Narrator]: "			
+			Wardrobe: .asciiz "[Narrator]: Maybe Crospey has come to his senses and became obedient or maybe he just really likes right doors. Anyway, Cropsey seems to have entered an empty room with only a wardrobe at the end of the room. \n1 - Approach and open the wardrobe"
+				Wardrobe2: .asciiz "[Narrator]: Cropsey approaches the wardrobe and opens it. Inside the wardrobe contained two costumes: The first was a bright orange Space Suit and the other was a dull silver set of armor with a sword and shield.\n1 - Put on the space suit\n2 - Put on the set of armor"
+					SpaceSuit: .asciiz "[Narrator]: Cropsey excitingly puts on the orange space suit. He closes his to embrace this moment, remembering his childhood dream of becoming an astronaut. Cropsey slowly opens his eyes and now he's walking toward a huge space shuttle. People cheering him and his crew behind him on. Cropsey enters the space shuttle and makes his way up to the cockpit"
+						SpaceShuttle: .asciiz "[Mission Control]: All systems checked. Ready for takeoff. \n[Narrator]: Cropsey"
+						
+					Fantasy: .asciiz "[Narrator]: Cropsey puts on the heavy armor and wields the sword and shield, one on each hand. He closes his eyes remembers the times he played RPGs on his PC. Cropsey slowly opens his eyes and sees that he is now in a mystical forest.\n He begins to walk through the forest when a wolf jumps in front of Cropsey and threatens to attack him. What will Cropsey do?\n1 - Attack the wolf with your sword\n2 - Bash the wolf with your shield\n3 - Attempt to befriend the wolf\n4 - Flee"
+						SwordWolf: .asciiz "[Narrator]: Cropsey charges forward and swings his sword at the wolf slashing right at the nape of the wolf's neck. The wolf wimpers and howls as it falls down, lifeless. \n1 - Continue forward"
+						ShieldWolf: .asciiz "[Narrator]: Cropsey charges forward with his shield in front and bashes the wolf knocking it down. The wolf wimpers and flees back into the depths of the forest realizing Cropsey's overwhelming strength. \n2 - Continue forward"
+						BefriendWolf: .asciiz "[Narrator]: Cropsey had not intentions on hurting an animal so he dropped his sword and shield and took off his helmet and gloves. Cropsey attempts to befriend the wolf by reaching out on hand slowly towards the wolf.\n But the wolf ignores Cropsey's gesture and leaps at him knocking Cropsey down and devours. How foolish it was for Cropsey to be so trusting of other-worldly beings!"
+						FleeWolf: .asciiz "[Narrator]: Cropsey drops his weapons in fear, turns around and sprints away but his armor was too heavy; too much of a burden on his body that the wolf was able catch up to him with ease, leap onto him, knock him down, and devour his face. How foolish of Cropsey to think he can outrun a wolf!"
+							Lake: .asciiz "[Narrator]: Cropsey continues to walk deeper into the forest until he reaches a large lake. In the middle of the lake was a small island that contained a chest.\n1 - Go to the chest"
+								Lake2: .asciiz "[Narrator]: As Cropsey moves closer to the lake, a huge tentacle monster erupts from the bottom of the lake. Cropsey holds his sword and shield up and prepares to fight the mosnter. The monster begins to swing it's tentacles at Cropsey. \n1 - Slice the incoming tentacles\n2 - Shield yourself from the incoming tentacles\n3 - Charge through"	
 						
 		
 		
@@ -265,13 +279,14 @@
 			beq $a1, 1, nElevator
 			beq $a1, 2, nCloset1
 			
+			#Table Pathway
 			nRTable:
 			la $a0, RTable
 			li $v0, 51
 			syscall
 			la $a1, ($a0)
 			
-	
+			#Plant Trivia
 			nRPlant:
 			la $a0, RPlant
 			li $v0, 51
@@ -431,13 +446,25 @@
 							li $v0, 51
 							syscall
 							la $a1, ($a0)
-							beq $a1, 1, nDONOTENTER
+							beq $a1, 1, nDONOTENTER2
 							beq $a1, 2, nStairCase
 					
 					nDONOTENTER:
 					la $a0, DONOTENTER
 					li $v0, 51
 					syscall
+					la $a1, ($a0)
+					beq $a1, 1, nNoEntryRoom
+					beq $a1, 2, nStairCase
+					beq $a1, 3, nChest
+					
+					nDONOTENTER2:
+					la $a0, DONOTENTER2
+					li $v0, 51
+					syscall
+					la $a1, ($a0)
+					beq $a1, 1, nNoEntryRoom
+					beq $a1, 2, nStairCase
 					
 					nStairCase:
 					la $a0, StairCase
